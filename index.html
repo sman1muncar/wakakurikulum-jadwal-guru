@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jadwal Mengajar Guru | SMAN 1 Muncar</title>
+<meta name="description" content="Portal Jadwal Mengajar Guru SMAN 1 Muncar Tahun Pelajaran 2026/2027">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+:root{--blue:#6d94cf;--blue-dark:#3e65a0;--navy:#183154;--yellow:#f6e51e;--ink:#182235;--muted:#6b7890;--bg:#f5f8fc}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:Inter,Arial,sans-serif;color:var(--ink);min-height:100vh}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 8% 5%,rgba(109,148,207,.25),transparent 30%),radial-gradient(circle at 90% 95%,rgba(246,229,30,.12),transparent 28%)}
+header{background:linear-gradient(135deg,var(--navy),#315a91 60%,#6d94cf);color:#fff;position:relative;overflow:hidden}
+header:after{content:"";position:absolute;width:480px;height:480px;border:1px solid rgba(255,255,255,.16);border-radius:50%;right:-170px;top:-260px;box-shadow:0 0 0 30px rgba(255,255,255,.03),0 0 0 60px rgba(255,255,255,.025)}
+.nav{max-width:1120px;margin:auto;padding:18px 24px;display:flex;align-items:center;gap:14px;position:relative;z-index:1}
+.logo{width:58px;height:58px;border-radius:18px;object-fit:cover;border:3px solid rgba(255,255,255,.75);box-shadow:0 8px 20px rgba(0,0,0,.18)}
+.brand strong{display:block;font-family:'Plus Jakarta Sans';font-size:17px;letter-spacing:.2px}
+.brand span{font-size:12px;color:#dbe7fb}
+.hero{max-width:1120px;margin:auto;padding:54px 24px 70px;position:relative;z-index:1}
+.kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:8px 14px;font-size:12px;font-weight:700;letter-spacing:.7px;text-transform:uppercase}
+.kicker i{width:8px;height:8px;background:var(--yellow);border-radius:50%;box-shadow:0 0 0 5px rgba(246,229,30,.14)}
+h1{font-family:'Plus Jakarta Sans';font-size:clamp(32px,5vw,58px);line-height:1.08;margin:20px 0 16px;max-width:730px;letter-spacing:-1.8px}
+.hero p{max-width:620px;color:#dbe7fb;font-size:16px;line-height:1.7;margin:0}
+.main{max-width:1120px;margin:-28px auto 0;padding:0 24px 48px;position:relative}
+.panel{background:rgba(255,255,255,.94);border:1px solid #e4eaf3;border-radius:24px;box-shadow:0 20px 55px rgba(25,48,80,.12);padding:28px}
+.panel-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:24px}
+.panel-head h2{font-family:'Plus Jakarta Sans';font-size:23px;margin:0 0 7px}
+.panel-head p{margin:0;color:var(--muted);font-size:14px}
+.badge{background:#edf3fc;color:var(--blue-dark);padding:9px 13px;border-radius:12px;font-weight:700;font-size:12px;white-space:nowrap}
+.form-grid{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:end}
+label{display:block;font-size:12px;font-weight:700;color:#506078;margin:0 0 8px}
+.select-wrap{position:relative}
+select{width:100%;height:54px;padding:0 46px 0 17px;border:1px solid #dbe3ee;border-radius:14px;background:#fff;color:var(--ink);font-size:15px;font-weight:600;outline:none;appearance:none;transition:.2s}
+select:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(109,148,207,.14)}
+.select-wrap:after{content:"⌄";position:absolute;right:18px;top:14px;font-size:21px;color:var(--blue-dark);pointer-events:none}
+button{height:54px;border:0;border-radius:14px;padding:0 26px;background:var(--yellow);color:#262a2e;font-size:15px;font-weight:800;cursor:pointer;box-shadow:0 10px 22px rgba(246,229,30,.25);transition:transform .18s,box-shadow .18s}
+button:hover{transform:translateY(-2px);box-shadow:0 14px 26px rgba(246,229,30,.35)}
+button:active{transform:translateY(0)}
+button:disabled{opacity:.55;cursor:not-allowed;transform:none;box-shadow:none}
+.status{margin-top:18px;display:none;align-items:center;gap:10px;background:#f2f7ff;border:1px solid #dbe9fb;border-radius:14px;padding:14px 16px;color:#42628d;font-size:13px}
+.status.show{display:flex}
+.status .dot{width:8px;height:8px;border-radius:50%;background:#4a9a6a;box-shadow:0 0 0 5px rgba(74,154,106,.12)}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.info{background:#fff;border:1px solid #e7edf5;border-radius:16px;padding:18px}
+.info strong{font-family:'Plus Jakarta Sans';font-size:22px;display:block;color:var(--navy)}
+.info span{font-size:12px;color:var(--muted);display:block;margin-top:4px}
+footer{max-width:1120px;margin:auto;padding:0 24px 30px;color:#8490a2;font-size:12px;display:flex;justify-content:space-between;gap:20px}
+@media(max-width:650px){.nav,.hero,.main,footer{padding-left:18px;padding-right:18px}.panel{padding:20px;border-radius:20px}.panel-head{display:block}.badge{display:inline-block;margin-top:14px}.form-grid{grid-template-columns:1fr}button{width:100%}.info-grid{grid-template-columns:1fr 1fr}footer{display:block}footer span{display:block;margin-top:8px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <img class="logo" src="assets/logo-sman1-muncar.jpg" alt="Logo SMAN 1 Muncar">
+    <div class="brand"><strong>SMAN 1 MUNCAR</strong><span>Portal Informasi Guru</span></div>
+  </div>
+  <div class="hero">
+    <div class="kicker"><i></i> Tahun Pelajaran 2026/2027</div>
+    <h1>Jadwal Mengajar Guru<br>SMAN 1 Muncar</h1>
+    <p>Akses jadwal mengajar Anda dengan cepat, rapi, dan praktis. Pilih nama guru, kemudian generate jadwal untuk membuka dokumen PDF jadwal mengajar.</p>
+  </div>
+</header>
+<main class="main">
+  <section class="panel">
+    <div class="panel-head">
+      <div><h2>Generate Jadwal Mengajar</h2><p>Silakan pilih nama guru dari menu dropdown di bawah ini.</p></div>
+      <div class="badge">● Sistem Aktif</div>
+    </div>
+    <div class="form-grid">
+      <div>
+        <label for="teacher">NAMA GURU</label>
+        <div class="select-wrap"><select id="teacher"><option value="">Pilih nama guru...</option></select></div>
+      </div>
+      <button id="generate" disabled>Generate Jadwal ↗</button>
+    </div>
+    <div class="status" id="status"><span class="dot"></span><span id="statusText"></span></div>
+  </section>
+  </main>
+<footer><span>© 2026 SMAN 1 Muncar</span><span>Jadwal Mengajar Guru · Tahun Pelajaran 2026/2027</span></footer>
+<script>
+const teachers = [{"name": "Sukarman", "url": "https://drive.google.com/file/d/1lxHEdPklu6nidZmI_hBjyC29TNpwf8i0/view?usp=drive_link"}, {"name": "Siti Nurul Watoni", "url": "https://drive.google.com/file/d/1Ye3lboO6vTqERzC42Nnzt_KNCEv3x04j/view?usp=drive_link"}, {"name": "Sri Wahyuningsih", "url": "https://drive.google.com/file/d/1xh_bj32_i9JVtdn1ygjrw4yp-3L2ZpG-/view?usp=drive_link"}, {"name": "Nurul Khotimah", "url": "https://drive.google.com/file/d/19trwFLOcdCuRREYststtr2EXtsynGqkF/view?usp=drive_link"}, {"name": "Siti Cholifah", "url": "https://drive.google.com/file/d/193DdPTTazDgLgqaC1uU6CtYWFEgsQ9_K/view?usp=drive_link"}, {"name": "Rahmat Hariadi", "url": "https://drive.google.com/file/d/1iZaoQBfZXa5_Ebarjk6uBCycg8FtJtf8/view?usp=drive_link"}, {"name": "Paimin", "url": "https://drive.google.com/file/d/10Aywfh4q091EOlpE32FUf6Ludy8VtnIO/view?usp=drive_link"}, {"name": "Parwati", "url": "https://drive.google.com/file/d/17n5YgEbmH5tXv9tLBP5pGmqNwBmgoO-7/view?usp=drive_link"}, {"name": "Sutoyo", "url": "https://drive.google.com/file/d/1Z5rW6T37siQIaaOMeisEObPrpW8oHTQu/view?usp=drive_link"}, {"name": "Sukoco", "url": "https://drive.google.com/file/d/1WzfYSqnnBDiNsqPrBaylD4zj8Gz26R6E/view?usp=drive_link"}, {"name": "Afifatul Irsha", "url": "https://drive.google.com/file/d/1FWyxIcO_9zP6c_tNzflcAOqoI_FxBbe7/view?usp=drive_link"}, {"name": "Bety Styo Pratiwi", "url": "https://drive.google.com/file/d/197lfUAbpK7Wfrug3v5SaAnkaUc34D69V/view?usp=drive_link"}, {"name": "Nugraha Okta Maulana", "url": "https://drive.google.com/file/d/1vZSSVlQ-_6BScbdvAZme8TEJQKMB7GVq/view?usp=drive_link"}, {"name": "Kasianto Idris", "url": "https://drive.google.com/file/d/18jF21y2vnj0kgeDQRECiAvQisonrJZzd/view?usp=drive_link"}, {"name": "Nurmahayu Kusumawati", "url": "https://drive.google.com/file/d/1z5u7_as3c67WWqX1JjgbeYJ0KRB9WRww/view?usp=drive_link"}, {"name": "Nurul Handayani", "url": "https://drive.google.com/file/d/1QKIpo5HrOGxB4lGDPrubcUvDBX3Wymso/view?usp=drive_link"}, {"name": "Fepti Arum Sari", "url": "https://drive.google.com/file/d/1znKUSelkhOXPSy32fnGSSYP6jOS7Isv3/view?usp=drive_link"}, {"name": "Slamet Ari Wibowo", "url": "https://drive.google.com/file/d/1nZIj4o4VD34MU2aCGChQx3FMjgvRcVf6/view?usp=drive_link"}, {"name": "Grace Victoryne", "url": "https://drive.google.com/file/d/1KpN0UVQRz7T5jBj6nNqZeDMdV1GyA90Z/view?usp=drive_link"}, {"name": "Rois Amrullah Akbar", "url": "https://drive.google.com/file/d/1x6FS_tqR-hmxc-R7wLCnOjlnryQlX0qZ/view?usp=drive_link"}, {"name": "Dolly Intan Nirwana", "url": "https://drive.google.com/file/d/1QN05o227vQBTP-Rl3rPIOQKjC4jyhYKW/view?usp=drive_link"}, {"name": "Erlyn Yulia", "url": "https://drive.google.com/file/d/1in3oio8keGX96pjnANJZRaScFfuwO7z1/view?usp=drive_link"}, {"name": "Fika Yulis Tyani", "url": "https://drive.google.com/file/d/1IK4VN9P0wTYFKlCdzSuiDP8X4nf7KiFn/view?usp=drive_link"}, {"name": "Bambang Darmanto", "url": "https://drive.google.com/file/d/1SxCVAyLuOu7jazURa55JpvD6RCo_oV8z/view?usp=drive_link"}, {"name": "Moh Ihwan Muslimin", "url": "https://drive.google.com/file/d/1zLR7rl26HNHkQRget3ZzE2QCDqymSlAM/view?usp=drive_link"}, {"name": "Moh Ali Wafa", "url": "https://drive.google.com/file/d/1f0vO0daIH-BxJB3kP5KwJh43863triz6/view?usp=drive_link"}, {"name": "Tri Asiyah", "url": "https://drive.google.com/file/d/1xjpwlhNn6EG1OvPf-RRMIy0TK6P1CRtQ/view?usp=drive_link"}, {"name": "Novita Rizgi Amalia", "url": "https://drive.google.com/file/d/1kKkIBGXjp3fl90oiC2zhC49VRwPeUmS9/view?usp=drive_link"}, {"name": "Mega Nily Sari", "url": "https://drive.google.com/file/d/1HshADt9EnYWR-tHr0iuE3OTHTynBCs7C/view?usp=drive_link"}, {"name": "Suci Rohmatul H.", "url": "https://drive.google.com/file/d/1xZJryoQrXqaJOfv9uauCHRcHSNlC3tEf/view?usp=sharing"}, {"name": "Aufa M. Irshad", "url": "https://drive.google.com/file/d/1pxcCqw1fRe80CROBQoQy6oq0gdHkWS3i/view?usp=drive_link"}, {"name": "Arya Bima P.", "url": "https://drive.google.com/file/d/1hb-X4sVrVCctCivxccn7yHKdWYMF285k/view?usp=drive_link"}, {"name": "M. Arfifiullah", "url": "https://drive.google.com/file/d/1D5hcVEnaBy4d9MiHL4yIP6w8DQ3ugjEw/view?usp=drive_link"}, {"name": "Lisa Waranita", "url": "https://drive.google.com/file/d/1G0XvEdft3suExLz1HFgWj5nC8Z35POsj/view?usp=drive_link"}, {"name": "Gumelar Pridhiantitsa", "url": "https://drive.google.com/file/d/1G3aQ9DpAE3Y_iJFUAxukQFrHBfTXMNgR/view?usp=drive_link"}, {"name": "Agus Suyatno", "url": "https://drive.google.com/file/d/1dEHfU1xEcfqBioGAqrol0WV54sG2pjgB/view?usp=drive_link"}, {"name": "M. Fadli Arifin", "url": "https://drive.google.com/file/d/1Zd3WlDijZbUGu34Py-1255BM63y5Bh-P/view?usp=drive_link"}, {"name": "Hanif Setiawan", "url": "https://drive.google.com/file/d/1B_eOGGKHSNCxvXJOScZrbQJ-6C395Ptg/view?usp=drive_link"}, {"name": "Binti Farhatun Nisa", "url": "https://drive.google.com/file/d/1ZQ8VWYjc8B5c28Yw_IiElzfL7do-yhwa/view?usp=drive_link"}, {"name": "Randi Wijayanto", "url": "https://drive.google.com/file/d/1l3PaAvywQ8fAbbjc1XttelMF6s6fIlV7/view?usp=drive_link"}, {"name": "Rio Yevan Permana", "url": "https://drive.google.com/file/d/1z0iIe2OXdcNG9rqKAr6NZgBAeMRejyfQ/view?usp=drive_link"}, {"name": "Aditya Permana Putra", "url": "https://drive.google.com/file/d/16uLJtYpKcRGuilLcS5LeD-a5f258X1Tn/view?usp=drive_link"}, {"name": "Khusnul Rahayuningsih", "url": "https://drive.google.com/file/d/1xin3qYHTDncXM3H1h9m8AfbbmMCs1X-Y/view?usp=drive_link"}, {"name": "Tedy Dwi Ariyanto", "url": "https://drive.google.com/file/d/10wU6V-SCfWzhvoBBo_1jFKP0p6JKvGYd/view?usp=drive_link"}, {"name": "Osnanto", "url": "https://drive.google.com/file/d/1P8j7dKSyiPwSiRxwttNDnYudRYAVuBZa/view?usp=drive_link"}, {"name": "Farid Christantra", "url": "https://drive.google.com/file/d/1eFhNpGSxXiAfgZ5v_5tPm0S4ClGevLMe/view?usp=drive_link"}];
+const select = document.getElementById('teacher');
+const button = document.getElementById('generate');
+const status = document.getElementById('status');
+const statusText = document.getElementById('statusText');
+
+teachers.forEach((teacher) => {
+  const option = document.createElement('option');
+  option.value = teacher.url;
+  option.textContent = teacher.name;
+  select.appendChild(option);
+});
+select.addEventListener('change', () => {
+  button.disabled = !select.value;
+  status.classList.remove('show');
+});
+button.addEventListener('click', () => {
+  const teacher = teachers.find(t => t.url === select.value);
+  if (!teacher) return;
+  statusText.textContent = 'Jadwal ' + teacher.name + ' sedang dibuka dalam dokumen PDF...';
+  status.classList.add('show');
+  setTimeout(() => window.open(teacher.url, '_blank', 'noopener,noreferrer'), 250);
+});
+</script>
+</body>
+</html>
